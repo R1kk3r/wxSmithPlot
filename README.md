@@ -1,10 +1,12 @@
-## Synopsis
-
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+One day, I decided to develop using the wxWidget library and Code::Blocks as IDE. My choice was made because of the wxSmith plugin that allows you to draw your wxWidget UI using a simple and well-designed GUI interface.
+
+I was playing around with the different widget when I thought it would be nice to make some graphics (I needed for my project). I found the wxWdiget library and was quite happy to see the wxSmithPlot plugin. Unfortunately, the plugin was not maintained anymore (even if it's always in the Code::Blocks source tree). By the way, the wxMathPlot library is not really updated often as well.
+
+During my free time, I managed to make the plugin working again. The result is this new repo that contains a working wxSmithPlot under Linux/Windows. I also started a wxMathPlot repo for adding a few stuff in it like the mpMarker class.
+
+Feel free to fork/pull/report problems :-)
 
 ## Installation
 
@@ -46,8 +48,12 @@ Btw, to compile Code::Blocks with the contrib plugins:
 make && make install
 ```
 
-## License
+For more information like compiling the plugin for a working Code::Blocks installation on Debian, see the [wxSmithPlot README](./src/plugins/contrib/wxSmithPlot/README).
 
-A short snippet describing the license (MIT, Apache, etc.)
+## Licenses
+
+[Code::Blocks License](./LICENSE_CodeBlocks)
+[wxMathPlot License](./LICENSE_wxMathPlot)
+
 
 
