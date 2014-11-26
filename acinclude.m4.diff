@@ -1,0 +1,55 @@
+--- trunk2/acinclude.m4	2014-11-25 21:32:57.548548603 +0100
++++ trunk/acinclude.m4	2014-11-25 10:11:34.047860605 +0100
+@@ -335,6 +335,7 @@
+ 	AM_CONDITIONAL([BUILD_WXSMITH], [false])
+ 	AM_CONDITIONAL([BUILD_WXSMITHCONTRIB], [false])
+ 	AM_CONDITIONAL([BUILD_WXSMITHAUI], [false])
++	AM_CONDITIONAL([BUILD_WXSMITHPLOT], [false])
+ 	AM_CONDITIONAL([BUILD_HEXEDITOR], [false])
+ 	AM_CONDITIONAL([BUILD_INCSEARCH], [false])
+ 	AM_CONDITIONAL([BUILD_MOUSESAP], [false])
+@@ -377,6 +378,7 @@
+ 	AM_CONDITIONAL([BUILD_WXSMITH], [true])
+ 	AM_CONDITIONAL([BUILD_WXSMITHCONTRIB], [true])
+ 	AM_CONDITIONAL([BUILD_WXSMITHAUI], [true])
++	AM_CONDITIONAL([BUILD_WXSMITHPLOT], [true])
+ 	AM_CONDITIONAL([BUILD_HEXEDITOR], [true])
+ 	AM_CONDITIONAL([BUILD_INCSEARCH], [true])
+ 	AM_CONDITIONAL([BUILD_MOUSESAP], [true])
+@@ -399,7 +401,7 @@
+   [                        		     codestat, copystrings, Cscope, DoxyBlocks, dragscroll, EditorConfig, EditorTweaks, envvars, ]
+   [                        		     FileManager, headerfixup, help, hexeditor, incsearch, keybinder, libfinder, MouseSap, ]
+   [                        		     NassiShneiderman, ProjectOptionsManipulator, profiler, regex, ReopenEditor, exporter, smartindent, spellchecker, ]
+-  [                        		     symtab, ThreadSearch, ToolsPlus, Valgrind, wxcontrib, wxsmith, wxsmithcontrib, wxsmithaui ],
++  [                        		     symtab, ThreadSearch, ToolsPlus, Valgrind, wxcontrib, wxsmith, wxsmithcontrib, wxsmithaui, wxsmithplot ],
+   plugins="$withval", plugins="none")
+ 
+ plugins=`echo $plugins | sed 's/,/ /g'`
+@@ -511,6 +513,9 @@
+ 	wxsmithaui)
+ 		AM_CONDITIONAL([BUILD_WXSMITHAUI], [true])
+ 		;;
++	wxsmithplot)
++		AM_CONDITIONAL([BUILD_WXSMITHPLOT], [true])
++		;;
+ 	hexeditor)
+ 		AM_CONDITIONAL([BUILD_HEXEDITOR], [true])
+ 		;;
+@@ -625,6 +630,9 @@
+ 	-wxsmithaui)
+ 		AM_CONDITIONAL([BUILD_WXSMITHAUI], [false])
+ 		;;
++	-wxsmithplot)
++		AM_CONDITIONAL([BUILD_WXSMITHPLOT], [false])
++		;;
+ 	-hexeditor)
+ 		AM_CONDITIONAL([BUILD_HEXEDITOR], [false])
+ 		;;
+@@ -692,6 +700,7 @@
+ AC_SUBST(BUILD_WXSMITH)
+ AC_SUBST(BUILD_WXSMITHCONTRIB)
+ AC_SUBST(BUILD_WXSMITHAUI)
++AC_SUBST(BUILD_WXSMITHPLOT)
+ 
+ GCC_PCH=0
+ PCH_FLAGS=

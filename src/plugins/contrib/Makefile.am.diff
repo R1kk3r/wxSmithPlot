@@ -1,0 +1,23 @@
+--- trunk2/src/plugins/contrib/Makefile.am	2014-11-25 21:32:21.024683059 +0100
++++ trunk/src/plugins/contrib/Makefile.am	2014-11-25 13:33:08.315589061 +0100
+@@ -130,6 +130,10 @@
+ MAYBE_WXSMITHAUI=wxSmith wxSmithAui
+ endif
+ 
++if BUILD_WXSMITHPLOT
++MAYBE_WXSMITHPLOT=wxSmith wxSmithPlot
++endif
++
+ if BUILD_HEXEDITOR
+ MAYBE_HEXEDITOR=HexEditor
+ endif
+@@ -192,7 +196,8 @@
+ 		$(MAYBE_WXCONTRIB) \
+ 		$(MAYBE_WXSMITH) \
+ 		$(MAYBE_WXSMITHCONTRIB) \
+-		$(MAYBE_WXSMITHAUI)
++		$(MAYBE_WXSMITHAUI) \
++		$(MAYBE_WXSMITHPLOT)
+ 
+ DIST_SUBDIRS = AutoVersioning \
+ 		BrowseTracker \
