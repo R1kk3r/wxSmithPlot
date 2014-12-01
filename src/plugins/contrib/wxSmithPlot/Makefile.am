@@ -41,6 +41,7 @@ wxSmithPlot.zip: manifest.xml
 libwxSmithPlot_la_SOURCES = \
 ./wxsAxis.cpp \
 ./wxsText.cpp \
+./wxsMarker.cpp \
 ./wxsMathPlot.cpp \
 ./wxsVector.cpp \
 ./wxsSmithPlot.cpp
@@ -51,6 +52,7 @@ pkgconfig_DATA = wxsmithplot.pc
 noinst_HEADERS = \
 ./wxsAxis.h \
 ./wxsText.h \
+./wxsMarker.h \
 ./wxsMathPlot.h \
 ./wxsVector.h \
 ./wxsSmithPlot.h
