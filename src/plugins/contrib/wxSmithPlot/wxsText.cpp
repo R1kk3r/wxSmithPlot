@@ -102,7 +102,7 @@ wxString    s;
 
 // the header for mathplot
 
-    AddHeader(_T("<mpText.h>"),GetInfo().ClassName,hfInPCH);
+    AddHeader(_T("<mathplot.h>"),GetInfo().ClassName,hfInPCH);
 
 // create the vector -- but not the setup code
 
